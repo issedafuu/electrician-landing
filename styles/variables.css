@@ -1,0 +1,12 @@
+:root {
+    --bg-main: #1B1B1B;
+    --bg-card: #030303;
+    --text-primary: #FAD649;
+    --text-secondary: #FFFFFF;
+    --text-on-accent: #1B1B1B;
+    --accent-yellow: #FAD649;
+
+    --semi-bold-font-weight: 'wght' 650;
+    --bold-font-weight: 'wght' 780;
+    --extra-bold-font-weight: 'wght' 840;
+}

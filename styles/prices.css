@@ -1,0 +1,123 @@
+.pricing {
+    position: relative;
+    z-index: 2;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 76px;
+}
+
+.pricing__wrapper {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.pricing-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(250, 214, 73, 0.3);
+    color: var(--text-secondary);
+    font-size: 24px;
+    transition: background-color 0.2s ease, padding 0.2s ease;
+}
+
+.pricing-row:last-child {
+    border-bottom: none;
+}
+
+.service-name {
+    white-space: nowrap;
+    font-variation-settings: var(--semi-bold-font-weight);
+    color: var(--text-secondary);
+}
+
+.pricing-line {
+    flex: 1;
+    height: 2px;
+    border-bottom: 2px dashed var(--accent-yellow);
+    margin: 0 20px;
+    opacity: 0.6;
+}
+
+.service-price {
+    white-space: nowrap;
+    color: var(--text-primary);
+    font-size: clamp(22px, 2.5vw, 32px);
+    font-variation-settings: var(--bold-font-weight);
+}
+
+/* Выделение ХИТА */
+.pricing-row.hit {
+    border: 2px solid var(--accent-yellow);
+    background-color: var(--bg-card);
+    padding: 24px 24px;
+    margin: 16px 0;
+    position: relative;
+}
+
+.pricing-row.hit .pricing-line {
+    opacity: 1;
+}
+
+.hit-badge {
+    background-color: var(--bg-card);
+    border: 2px solid var(--accent-yellow);
+    color: var(--text-primary);
+    font-size: 14px;
+    padding: 2px 10px;
+    margin-left: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-variation-settings: var(--bold-font-weight);
+}
+
+.pricing__contact-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.pricing__contact-tg{
+    transition: all 0.32s ease-in-out;
+}
+.pricing__contact-tg:hover{
+    opacity: 0.5;
+}
+
+@media (max-width: 600px) {
+    .pricing-row {
+        font-size: 18px;
+        padding: 16px 0;
+        flex-wrap: wrap;
+        gap: 8px 0;
+    }
+    
+    .service-name {
+        width: 100%;
+        order: 1;
+    }
+    
+    .pricing-line {
+        display: none;
+    }
+    
+    .service-price {
+        width: 100%;
+        order: 2;
+        text-align: left;
+        font-size: 24px;
+    }
+    
+    .pricing-row.hit {
+        padding: 16px;
+    }
+}

@@ -1,0 +1,122 @@
+.services {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.services__wrapper {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    width: 100%;
+    max-width: 1600px;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.service-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-card);
+    border: 2px solid var(--accent-yellow);
+    transition: transform 0.3s ease;
+    height: auto;
+}
+
+.service-card__strip {
+    width: 100%;
+    height: 36px;
+    flex-shrink: 0;
+    background: repeating-linear-gradient(
+        -45deg,
+        var(--accent-yellow) 0px,
+        var(--accent-yellow) 16px,
+        var(--bg-card) 16px,
+        var(--bg-card) 32px
+    );
+    background-size: 200% 100%; 
+    will-change: background-position;
+    margin-top: 32px;
+}
+
+.service-card__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 124px 40px;
+    gap: 56px;
+}
+
+.service-card__icon svg {
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+
+.service-card__title {
+    color: var(--text-primary);
+    text-transform: uppercase;
+    font-size: clamp(32px, 4vw, 56px);
+    font-variation-settings: var(--semi-bold-font-weight);
+    margin: 0;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 1.1;
+}
+
+.service-card__desc {
+    color: var(--text-secondary);
+    font-size: clamp(18px, 2vw, 28px);
+    margin: 0;
+    text-align: center;
+    line-height: 1.4;
+    font-variation-settings: 'wght' 320;
+}
+
+.service-card:hover {
+    transform: scale(1.01);
+}
+.service-card:hover .service-card__strip {
+    transform: scale(1.01);
+    animation: stripMove 20s linear infinite;
+}
+
+@media (max-width: 900px) {
+    .services__wrapper {
+        flex-wrap: wrap;
+        padding: 0 20px;
+    }
+    .service-card {
+        flex: 1 1 calc(50% - 12px);
+        min-width: 280px;
+    }
+    .service-card__content {
+        padding: 40px 30px 40px;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .services__wrapper {
+        flex-direction: column;
+        padding: 0 16px;
+    }
+    .service-card {
+        flex: 1 1 100%;
+    }
+    .service-card__content {
+        padding: 30px 20px 30px;
+        gap: 12px;
+    }
+    .service-card__icon svg {
+        width: 80px;
+        height: 80px;
+    }
+}
