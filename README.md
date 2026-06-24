@@ -18,3 +18,13 @@
 
 ## 📂 Запуск
 Просто откройте `index.html` в любом браузере. Никаких сборщиков или npm не требуется.
+
+---
+
+## 🌐 Live Demo
+
+Посмотрите, как проект работает вживую:
+
+[![GitHub Pages](https://img.shields.io/badge/🌐-Посмотреть_сайт-FAD649?style=for-the-badge&logo=github&logoColor=black&color=FAD649&labelColor=1B1B1B)](https://issedafuu.github.io/electrician-landing/)
+
+> 🔗 Ссылка: [https://issedafuu.github.io/electrician-landing/](https://issedafuu.github.io/electrician-landing/)
